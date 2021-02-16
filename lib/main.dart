@@ -9,18 +9,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Contoh Padding")),
-        body: Container(
-            padding: EdgeInsets.only(left: 20),
-            margin: EdgeInsets.all(20),
-            height: 200,
-            width: 200,
-            alignment: Alignment.topLeft,
-            color: Colors.blueGrey,
-            child: Text(
-              'Ayo Belajar Flutter',
-              style: TextStyle(fontSize: 20, color: Colors.white),
-            ))),
-        );
+          appBar: AppBar(title: Text("Contoh Transform")),
+          body: Container(
+            decoration: BoxDecoration(
+              image: const DecorationImage(
+                image: NetworkImage('https://upload.wikimedia.org/wikipedia/commons/8/8d/American_bison_k5680-1.jpg'),
+              fit: BoxFit.fitWidth,
+            ),
+            border: Border.all(
+              color: Colors.black,
+              width: 8,
+            ),
+          ),
+          height: 200,
+          width: 300,
+          margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 30),
+          transform: Matrix4.rotationZ(-0.1),
+          )
+      ),
+    );
   }
 }
