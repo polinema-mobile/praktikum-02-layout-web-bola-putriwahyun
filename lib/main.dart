@@ -18,30 +18,58 @@ class MyApp extends StatelessWidget {
           title: Text("MyApp"),
         ),
         body: Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: <Widget>[
-              Expanded(
-                child: OutlineButton(
-                  onPressed: () {},
-                  borderSide: BorderSide(color: Colors.white70),
-                  child: Text("BERITA TERBARU", style: TextStyle(fontSize:8)),
+              new Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Expanded(
+                  child: OutlineButton(
+                    onPressed: () {},
+                    borderSide: BorderSide(color: Colors.white70),
+                    child: Text("BERITA TERBARU", style: TextStyle(fontSize:8)),
+                  ),
                 ),
-              ),
-              SizedBox(
-                width: 5,
-              ),
-              Expanded(
-                child: OutlineButton(
-                  onPressed: () {},
-                  borderSide: BorderSide(color: Colors.white70),
-                  child: Text("PERTANDINGAN HARI INI", style: TextStyle(fontSize:8)),
+                SizedBox(
+                  width: 5,
                 ),
+                Expanded(
+                  child: OutlineButton(
+                    onPressed: () {},
+                    borderSide: BorderSide(color: Colors.white70),
+                    child: Text("PERTANDINGAN HARI INI", style: TextStyle(fontSize:8)),
+                  ),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+              ],         
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.network(
+                        'https://livesportupdates.com/wp-content/uploads/2020/12/diego-costa_1dq1b6p5g1d1w1fhzzirww8bie.jpg'
+                      ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(
+                      child: Text("Costa Mendekat Ke Palmeiras", style: TextStyle(fontSize:15)),
+                      ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(7.0),
+                    color: Colors.purpleAccent[400],
+                    alignment: Alignment.centerLeft,
+                    child: Text("Transfer", style: TextStyle(fontSize:10)),
+                    height: 50,
+                    width: 500,
+                  ),
+                ],
               ),
-              SizedBox(
-                width: 5,
-              ),
-            ],
+                ),
+            ]
             ),
           
         ),
