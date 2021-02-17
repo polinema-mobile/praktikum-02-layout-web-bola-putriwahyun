@@ -9,52 +9,75 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Contoh GridView Widget"),
+          title: Text("MyApp"),
         ),
-        body: GridView.count(
-          crossAxisCount: 2,
+        body: Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Expanded(
+                child: OutlineButton(
+                  onPressed: () {},
+                  borderSide: BorderSide(color: Colors.white70),
+                  child: Text("BERITA TERBARU", style: TextStyle(fontSize:8)),
+                ),
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Expanded(
+                child: OutlineButton(
+                  onPressed: () {},
+                  borderSide: BorderSide(color: Colors.white70),
+                  child: Text("PERTANDINGAN HARI INI", style: TextStyle(fontSize:8)),
+                ),
+              ),
+              SizedBox(
+                width: 5,
+              ),
+            ],
+            ),
+          
+        ),
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  String nama = "Putri Wahyu Ningsih";
+  String nim = "1931710136";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-              color: Colors.green,
-              alignment:Alignment.center,
-              child: Text("1", style: TextStyle(fontSize:30,color: Colors.white)),
+            Text(
+              '$nama',
             ),
-            Container(
-              color: Colors.red,
-              alignment:Alignment.center,
-              child: Text("2", style: TextStyle(fontSize:30,color: Colors.white)),
-              height: 400.0,
-              width: 300.0,
-            ),
-            Container(
-              color: Colors.deepPurple,
-              alignment:Alignment.center,
-              child: Text("3", style: TextStyle(fontSize:30,color: Colors.white)),
-              height: 200.0,
-              width: 200.0,
-            ),
-            Container(
-              color: Colors.blueGrey,
-              alignment:Alignment.center,
-              child: Text("4", style: TextStyle(fontSize:30,color: Colors.white)),
-              height: 200.0,
-              width: 200.0,
-            ),
-            Container(
-              color: Colors.cyan[800],
-              alignment:Alignment.center,
-              child: Text("5", style: TextStyle(fontSize:30,color: Colors.white)),
-              height: 200.0,
-              width: 200.0,
-            ),
-            Container(
-              color: Colors.yellow[800],
-              alignment:Alignment.center,
-              child: Text("6", style: TextStyle(fontSize:30,color: Colors.white)),
-              height: 200.0,
-              width: 200.0,
+            Text(
+              '$nim',
             ),
           ],
         ),
