@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         body: Container(
           child: Column(
             children: <Widget>[
-              new Row(
+            new Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Expanded(
@@ -46,6 +46,9 @@ class MyApp extends StatelessWidget {
               ],         
             ),
             Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.purpleAccent[400])
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -63,15 +66,102 @@ class MyApp extends StatelessWidget {
                     color: Colors.purpleAccent[400],
                     alignment: Alignment.centerLeft,
                     child: Text("Transfer", style: TextStyle(fontSize:10)),
-                    height: 50,
+                    height: 40,
                     width: 500,
                   ),
                 ],
               ),
-                ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.blueGrey)
+              ),
+              child: Column(
+                children: <Widget>[
+                  new Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Expanded(
+                          child: 
+                          Image.network(
+                            'https://images.daznservices.com/di/library/GOAL/c0/68/gerard-pique-barcelona-yellow-card-2020-21_1b5pixs2oir8s1hy0nwfy1tnrz.jpg?t=1931977831&amp;quality=60&amp;w=700'
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Center(
+                            child: Text("Pique Bilang Wasit Untungkan Madrid, Koeman Tepuk Jidat", style: TextStyle(fontSize:9)),
+                          )
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],         
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.centerLeft,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.blueGrey.withOpacity(0.5))
+                    ),
+                    child: Text("Barcelona Feb 13,2021", style: TextStyle(fontSize:10)),
+                    height: 40,
+                    width: 500,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+            ),
+                        Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.blueGrey)
+              ),
+              child: Column(
+                children: <Widget>[
+                  new Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Expanded(
+                          child: 
+                          Image.network(
+                            'https://images.daznservices.com/di/library/GOAL/c0/68/gerard-pique-barcelona-yellow-card-2020-21_1b5pixs2oir8s1hy0nwfy1tnrz.jpg?t=1931977831&amp;quality=60&amp;w=700'
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Center(
+                            child: Text("Pique Bilang Wasit Untungkan Madrid, Koeman Tepuk Jidat", style: TextStyle(fontSize:9)),
+                          )
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],         
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.centerLeft,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.blueGrey.withOpacity(0.5))
+                    ),
+                    child: Text("Barcelona Feb 13,2021", style: TextStyle(fontSize:10)),
+                    height: 40,
+                    width: 500,
+                  ),
+                ],
+              ),
+            ),
             ]
             ),
-          
         ),
       ),
     );
@@ -88,8 +178,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String nama = "Putri Wahyu Ningsih";
-  String nim = "1931710136";
 
   @override
   Widget build(BuildContext context) {
@@ -101,12 +189,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              '$nama',
-            ),
-            Text(
-              '$nim',
-            ),
           ],
         ),
       ),
